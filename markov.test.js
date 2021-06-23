@@ -12,13 +12,13 @@ describe('markov machin', function () {
     
     test('choice picks from array', function () {
         expect(MarkovMachine.choice([1, 1, 1])).toEqual(1);
-        expect([1, 2, 3]).toEqual(MarkovMachine.choice([1, 2, 3]));
+        expect([1, 2, 3]).toContain(MarkovMachine.choice([1, 2, 3]));
     });
 
     test ('generates semi-predicatable text', function () {
         let mm = new MarkovMachine("a b c");
         let text = mm.makeText();
-        expect(["a b c", "b c", "c"]).toEqual(text);
+        expect(["a b c", "b c", "c"]).toContain(text);
     });
 
     test('generates valid text', function () {
