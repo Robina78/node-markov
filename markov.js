@@ -6,7 +6,7 @@ class MarkovMachine {
     let words = text.split(/[ \r\n]+/);
     this.words = words.filter(char => char !== "");
     this.makeChains();
-  }
+  };
 
   /** set markov chains:
    *
